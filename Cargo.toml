@@ -1,0 +1,18 @@
+[package]
+name = "spatial"
+version = "0.1.0"
+edition = "2021"
+authors = ["aegistudio (www@aegistudio.net)"]
+license = "MIT"
+description = "Handy geometry and spatial indexing library"
+
+[dev-dependencies]
+anyhow = {version = "1.0"}
+rand = {version = "0.5.0"}
+base64 = {version = "0.13.0"}
+
+[profile.bench]
+# Complete debug info is need for benchmarking.
+inherits = "release"
+debug = 2
+strip = "none"
